@@ -25,15 +25,15 @@ app.post('/user/:id',(req, res) => {
 } );
 
 app.put('/contact',(req, res) => {
-    res.send('alcky gocor');
+    res.send('asfasf');
 } );
 
 app.delete('/test',(req, res) => {
-    res.send('puto el que lee');
+    res.send('asfadf');
 } );
 
 app.get('/agga',(req, res) =>{
-    res.send('lucas es alto gei');
+    res.send('aadfasd');
 });
 app.use(express.static('public'));
 
