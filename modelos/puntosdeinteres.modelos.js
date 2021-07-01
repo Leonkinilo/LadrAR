@@ -1,10 +1,9 @@
-const { model, Schema} = require('mongoose');
+const { Schema, model} = require('mongoose');
 
 const PuntoDeInteresSchema = new Schema({
     nombre: String,
     ubicacion: {
-        type: String,
-        required: true
+        type: String
     },
     descripcion: String,
     Contacto: {
@@ -12,11 +11,10 @@ const PuntoDeInteresSchema = new Schema({
         trim: true
     },
     tipo: {
-        type: String,
-        required: true
+        type: String
     },
 }, {
     timestamps: true
 });
 
-module.exports = model('UbicacionesSchema', PuntoDeInteresSchema);
+module.exports = model('Ubicaciones', PuntoDeInteresSchema);
