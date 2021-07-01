@@ -9,7 +9,7 @@
   "devDependencies": {
     "nodemon": "^2.0.8"
   },
-  "name": "ladrar-main",
+  "name": "LadrAR-main",
   "description": "Una aplicacion la cual facilita el encuentro y la busqueda de perro perdidos, ademas de facilitar el acceso a vetrinarias, refugios y puntos de venta de productos para mascotas",
   "version": "1.0.0",
   "main": "index.js",
@@ -18,13 +18,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Leonkinilo/LadrAR.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Leonkinilo/LadrAR/issues"
-  },
-  "homepage": "https://github.com/Leonkinilo/LadrAR#readme"
+  "license": "ISC"
 }
