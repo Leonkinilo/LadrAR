@@ -1,17 +1,22 @@
 const { model, Schema} = require('mongoose');
 
-new Schema({
+const PuntoDeInteresSchema = new Schema({
     nombre: String,
     ubicacion: {
         type: String,
         required: true
     },
     descripcion: String,
-    Contacto: String,
+    Contacto: {
+        type: String,
+        trim: true
+    },
     tipo: {
         type: String,
         required: true
     },
 }, {
     timestamps: true
-})
+});
+
+module.exports = model('UbicacionesSchema', PuntoDeInteresSchema);
