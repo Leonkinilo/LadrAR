@@ -1,5 +1,6 @@
 //Juan
 const express = require('express');
+const cors = require('cors');
 
 // initializations
 const app = express();
@@ -8,10 +9,12 @@ const app = express();
 app.set('port', process.env.PORT || 3000);
 
 // middlewares
+app.use(cors());
 
 // global variables
 
 // routes
+app.use('/perros', require ('./routes/perros.rutas'));
 
 // static files
 
