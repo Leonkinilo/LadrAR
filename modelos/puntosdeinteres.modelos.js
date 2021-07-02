@@ -6,7 +6,7 @@ const PuntoDeInteresSchema = new Schema({
         type: String,
         required: true
     },
-    Contacto: String,
+    contacto: String,
     descripcion: {
         type: String,
         trim: true
