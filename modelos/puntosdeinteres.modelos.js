@@ -14,7 +14,7 @@ const PuntoDeInteresSchema = new Schema({
     tipo: {
         type: String,
         required: true
-    },
+    }
 }, {
     timestamps: true
 });
