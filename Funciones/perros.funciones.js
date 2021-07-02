@@ -1,10 +1,14 @@
 const perros = [];
 
+const Models = require('../modelos/puntosdeinteres.modelos');
+
 perros.Crear = async (req, res) => {
-res.send("juan")
+    console.log(req.body);
+    res.send(req.body);
 }
 perros.Metodoget = async (req, res) => {
-res.json({nombre: 'juan', apellido: 'juancito'})
+    const Ubicacionesschema = await Models.find();
+    res.json(Ubicacionesschema);
 }
 
 
