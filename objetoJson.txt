@@ -1,0 +1,7 @@
+  {
+   "nombre" : "",
+   "ubicacion" : "",
+   "descripcion" : "",
+   "contacto" : "",
+   "tipo" : ""
+   }
