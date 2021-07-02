@@ -5,3 +5,5 @@
    "contacto" : "",
    "tipo" : ""
    }
+
+   .env : MONGODB_URI=mongodb+srv://ladrar:Password1@ladrar.phvn7.mongodb.net/test?retryWrites=true&w=majority
