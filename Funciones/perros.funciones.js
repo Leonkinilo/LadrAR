@@ -12,6 +12,7 @@ perros.Crear = async (req, res) => {
         contacto: contacto,
         tipo: tipo
     });
+    
     await nuevaubicacion.save();
     res.json({nuevo: nuevaubicacion});
 }
