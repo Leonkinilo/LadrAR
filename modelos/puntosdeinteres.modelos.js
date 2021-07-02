@@ -1,9 +1,9 @@
 const { Schema, model} = require('mongoose');
-var nom = "anonimo";
+const nom = "anonimo";
 const PuntoDeInteresSchema = new Schema({
     nombre: {
         type: String,
-        deafult: nom
+        
     },
     ubicacion: {
         type: String,
