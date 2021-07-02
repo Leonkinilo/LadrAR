@@ -1,6 +1,7 @@
 //Juan
 const express = require('express');
 const cors = require('cors');
+require ('./database');
 
 // initializations
 const app = express();
