@@ -1,6 +1,8 @@
   {
    "nombre" : "",
    "ubicacion" : "",
+   "latitud": 762134578145,
+   "longitud": 873693,
    "descripcion" : "",
    "contacto" : "",
    "tipo" : ""

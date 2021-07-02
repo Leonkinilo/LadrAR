@@ -1,11 +1,24 @@
 const { Schema, model} = require('mongoose');
-
+var nom = "anonimo";
 const PuntoDeInteresSchema = new Schema({
-    nombre: String,
+    nombre: {
+        type: String,
+        deafult: nom
+    },
     ubicacion: {
         type: String,
         required: true
     },
+    /*
+    latitud: {
+        type: Number,
+        required: true
+    },
+    longitud: {
+      type: Number,
+        required: true
+    },
+    */
     contacto: String,
     descripcion: {
         type: String,
