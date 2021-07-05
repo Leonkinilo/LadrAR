@@ -3,7 +3,6 @@ const nom = "anonimo";
 const PuntoDeInteresSchema = new Schema({
     nombre: {
         type: String,
-        
     },
     ubicacion: {
         type: String,
@@ -25,6 +24,10 @@ const PuntoDeInteresSchema = new Schema({
         trim: true
     },
     tipo: {
+        type: String,
+        required: true
+    },
+    creador: {
         type: String,
         required: true
     }
