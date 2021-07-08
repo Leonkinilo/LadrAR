@@ -1,5 +1,4 @@
 const { Schema, model} = require('mongoose');
-const nom = "anonimo";
 const PuntoDeInteresSchema = new Schema({
     nombre: {
         type: String,

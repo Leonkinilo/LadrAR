@@ -8,10 +8,11 @@ const perros = require ('../Funciones/perros.funciones');
 //rutas.delete('/', perros.borrar);
 rutas.route('/')
     .post(perros.Crear)
-    .get(perros.Metodoget)
+    .get(perros.BuscarTodas)
 
 rutas.route('/:id')
-    .delete(perros.borrar)
-    .get(perros.buscar)
+    .delete(perros.Borrar)
+    .get(perros.Buscar)
+    .put(perros.Actualizar)
 
 module.exports = rutas;
