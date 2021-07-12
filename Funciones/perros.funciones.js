@@ -13,14 +13,14 @@ perros.Crear = async (req, res) => {
         tipo,
         creador
     });
-
     await nuevaubicacion.save();
-    res.json({nuevo: nuevaubicacion});
+    res.json({nuevo: nuevaubicacion}); 
 }
 
 perros.BuscarTodas = async (req, res) => {
     const Ubicaciones = await Models.find();
     res.json(Ubicaciones);
+    
 }
 perros.Buscar = async (req, res) => {
     const ubicacion = await Models.findById(req.params.id);

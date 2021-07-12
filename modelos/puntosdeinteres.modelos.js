@@ -2,6 +2,7 @@ const { Schema, model} = require('mongoose');
 const PuntoDeInteresSchema = new Schema({
     nombre: {
         type: String,
+        required: true
     },
     ubicacion: {
         type: String,
@@ -20,7 +21,8 @@ const PuntoDeInteresSchema = new Schema({
     contacto: String,
     descripcion: {
         type: String,
-        trim: true
+        trim: true,
+        required: true
     },
     tipo: {
         type: String,
