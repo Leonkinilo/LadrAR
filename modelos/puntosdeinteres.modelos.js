@@ -4,11 +4,6 @@ const PuntoDeInteresSchema = new Schema({
         type: String,
         required: true
     },
-    ubicacion: {
-        type: String,
-        required: true
-    },
-    /*
     latitud: {
         type: Number,
         required: true
@@ -17,7 +12,6 @@ const PuntoDeInteresSchema = new Schema({
       type: Number,
         required: true
     },
-    */
     contacto: String,
     descripcion: {
         type: String,
