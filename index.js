@@ -18,7 +18,10 @@ app.use(express.json());
 
 // routes
 app.use('/perros', require ('./routes/perros.rutas'));
-app.use('/', require ('./routes/perros.rutas'));
+app.get('/', (req, res) =>{
+    res.sendFile('./MapaView');
+});
+//app.use('/', require ('./routes/perros.rutas'));
 
 // static files
 
