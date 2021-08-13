@@ -19,7 +19,7 @@ app.use(express.json());
 // routes
 app.use('/perros', require ('./routes/perros.rutas'));
 app.get('/', (req, res) =>{
-    res.send('');
+    res.redirect('/perros');
 });
 //app.use('/', require ('./routes/perros.rutas'));
 
