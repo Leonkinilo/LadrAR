@@ -9,23 +9,23 @@ import {
   Image,
   TouchableOpacity,
   TouchableHighlight,
-  Dimensions,
 } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
+//import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default ({ history }) => (
   <View style={styles.container}>
-
     <View style={styles.supbottom}>
       <View>
         <TouchableOpacity
-          onPress={() => alert('Registrarse')}
+          onPress={() => history.push('/Sigup')}
           style={styles.twinbot1}>
           <Text style={{ fontSize: 18 }}>Registrarse</Text>
         </TouchableOpacity>
       </View>
       <View>
         <TouchableOpacity
-          onPress={() => history.push('/Search')}
+          onPress={() => history.push('/Login')}
           style={styles.twinbot2}>
           <Text style={{ fontSize: 18 }}>Iniciar Sesion</Text>
         </TouchableOpacity>
@@ -33,27 +33,29 @@ export default ({ history }) => (
     </View>
 
     <View style={styles.title}>
-      <Text style={{fontSize:36,}}>Resgistrate</Text>
+      <Text style={{ fontSize: 36 }}>Iniciar Seccion</Text>
     </View>
 
     <View style={styles.formcontainer}>
       <View>
         <Text style={{ fontSize: 18 }}>Nombre de usuario</Text>
-        <TextInput style={styles.input} placeholder='Nombre de usuario'/>
-      </View>
-      <View>
-        <Text style={{ fontSize: 18 }}>Correo electronico</Text>
-        <TextInput style={styles.input} placeholder='Correo electronico'/>
+        <View style={styles.junto}>
+          <Icon name="person-outline" style={styles.icon} />
+          <TextInput style={styles.input} placeholder="Nombre de usuario" />
+        </View>
       </View>
       <View>
         <Text style={{ fontSize: 18 }}>Contraseña</Text>
-        <TextInput style={styles.input} placeholder='Contraseña'/>
+        <View style={styles.junto}>
+          <Icon name="lock-closed-outline" style={styles.icon} />
+          <TextInput style={styles.input} placeholder="Nombre de usuario" />
+        </View>
       </View>
       <TouchableOpacity
-          onPress={() => alert('A logrado registrarse')}
-          style={styles.regbot}>
-          <Text style={{ fontSize: 18 }}>Registrarse</Text>
-        </TouchableOpacity>
+        onPress={() => alert('A logrado Logearte')}
+        style={styles.regbot}>
+        <Text style={{ fontSize: 18 }}>Log in</Text>
+      </TouchableOpacity>
     </View>
   </View>
 );
@@ -70,6 +72,7 @@ const styles = StyleSheet.create({
     padding: 2,
     flexDirection: 'row',
     justifyContent: 'space-around',
+    position: 'relative', top: -10,
   },
   twinbot2: {
     padding: 2,
@@ -96,29 +99,31 @@ const styles = StyleSheet.create({
     borderColor: '#FC4C00',
   },
 
-  title:{
+  title: {
     //backgroundColor:'#292929',
-    textAlign:'center',
-    position: 'relative', top: 101,
+    textAlign: 'center',
+    position: 'relative',
+    top: 75,
   },
 
-  formcontainer:{
+  formcontainer: {
     //backgroundColor:'yellow',
     padding: 15,
-    position: 'relative', top:180,
+    position: 'relative',
+    top: 130,
     justifyContent: 'space-around',
     alignItems: 'center',
   },
-  input:{
+  input: {
     borderColor: '#B2B2B2',
     borderRadius: 15,
-    borderWidth:1,
+    borderWidth: 1,
     width: 260,
     height: 28,
-    paddingLeft:20,
-    marginBottom:20,
+    paddingLeft: 20,
+    marginBottom: 20,
   },
-  regbot:{
+  regbot: {
     padding: 2,
     paddingTop: 15,
     backgroundColor: '#FC4C00',
@@ -129,5 +134,15 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 10,
     borderColor: '#FC4C00',
+    position: 'relative', top: 85,
+  },
+  junto: {
+    paddingTop: 13,
+    flexDirection: 'row',
+  },
+  icon: {
+    paddingTop:2,
+    fontSize: 23,
+    color: '#FC4C00',
   },
 });
