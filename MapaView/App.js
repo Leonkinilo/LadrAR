@@ -1,10 +1,18 @@
 import * as React from 'react';
 import react from 'react';
-import { StyleSheet, Text, View, Button, Alert, Image } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Button,
+  Alert,
+  Image,
+  TouchableOpacity,
+} from 'react-native';
 import { NativeRouter, Route, Link, Switch } from 'react-router-native';
-import {Navegation} from 'react-native-navigation';
-import {creatnavigationStack} from '@react-navigation/stack'
-import {creatnavigationDraw} from '@react-navigation/drawer'
+import { Navegation } from 'react-native-navigation';
+import { creatnavigationStack } from '@react-navigation/stack';
+import { creatnavigationDraw } from '@react-navigation/drawer';
 
 // import Constants from 'expo-constants';
 // import { Card } from 'react-native-paper';
@@ -14,6 +22,7 @@ import Home from './Pantalla/Home';
 import Search from './Pantalla/Search';
 import Login from './Pantalla/Login';
 
+//<Text style={styles.butsize}>Search</Text>
 function App() {
   return (
     <NativeRouter>
@@ -22,7 +31,7 @@ function App() {
           <Link to="/Search" underlayColor="#f0f4f7" style={styles.navItem}>
             <Text style={styles.butsize}>Search</Text>
           </Link>
-           <Link to="/Home" underlayColor="#292929" style={styles.navItem}>
+          <Link to="/Home" underlayColor="#292929" style={styles.navItem}>
             <Text style={styles.butsize}>Home</Text>
           </Link>
           <Link to="/Login" underlayColor="#f0f4f7" style={styles.navItem}>
@@ -30,11 +39,11 @@ function App() {
           </Link>
         </View>
 
-        <switch>
-          <Route exact path="/" component={Home} />
+        <Switch>
+          <Route exact path="/Home" component={Home} />
           <Route exact path="/Search" component={Search} />
-          <Route exact path="/Login" component={Login} />
-        </switch>
+          <Route exact path="/" component={Login} />
+        </Switch>
       </View>
     </NativeRouter>
   );
@@ -64,8 +73,10 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     flexDirection: 'row',
     backgroundColor: '#FC4C00',
-    position: 'relative', top:540,
+    position: 'relative',
+    top: 613,
     height: 45,
+    alignItems: 'center'
   },
   navItem: {
     alignItems: 'center',
