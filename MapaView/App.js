@@ -22,6 +22,7 @@ import Home from './Pantalla/Home';
 import Search from './Pantalla/Search';
 import Sigup from './Pantalla/Sigup';
 import Login from './Pantalla/Login';
+import Homepage from './Homepage';
 
 //<Text style={styles.butsize}>Search</Text>
 function App() {
@@ -39,23 +40,36 @@ function App() {
             <Text style={styles.butsize}>Sigup</Text>
           </Link>
         </View>
-
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/Home" component={Home} />
           <Route exact path="/Search" component={Search} />
           <Route exact path="/Sigup" component={Sigup} />
           <Route exact path="/Login" component={Login} />
+          <Route exact path="/Homepage" component={Homepage} />
         </Switch>
       </View>
     </NativeRouter>
   );
 }
 
+// <View style={styles.nav}>
+//   <Link to="/Search" underlayColor="#f0f4f7" style={styles.navItem}>
+//     <Text style={styles.butsize}>Search</Text>
+//   </Link>
+//   <Link to="/Home" underlayColor="#292929" style={styles.navItem}>
+//     <Text style={styles.butsize}>Home</Text>
+//   </Link>
+//   <Link to="/Sigup" underlayColor="#f0f4f7" style={styles.navItem}>
+//     <Text style={styles.butsize}>Sigup</Text>
+//   </Link>
+// </View>
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#fff',
     padding: 0,
   },
+
+  //barra principal
   nav: {
     justifyContent: 'space-around',
     flexDirection: 'row',
@@ -63,7 +77,7 @@ const styles = StyleSheet.create({
     position: 'relative',
     top: 613,
     height: 45,
-    alignItems: 'center'
+    alignItems: 'center',
   },
   navItem: {
     alignItems: 'center',
