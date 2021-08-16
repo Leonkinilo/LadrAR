@@ -15,46 +15,66 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 export default ({ history }) => (
   <View style={styles.container}>
-    <View style={styles.supbottom}>
-      <View>
-        <TouchableOpacity
-          onPress={() => history.push('/Sigup')}
-          style={styles.twinbot1}>
-          <Text style={{ fontSize: 18 }}>Registrarse</Text>
-        </TouchableOpacity>
+    <View style={{ padding: 2 }}>
+      <View style={styles.supbottom}>
+        <View>
+          <TouchableOpacity
+            onPress={() => history.push('/Sigup')}
+            style={styles.twinbot1}>
+            <Text style={{ fontSize: 18 }}>Registrarse</Text>
+          </TouchableOpacity>
+        </View>
+        <View>
+          <TouchableOpacity
+            onPress={() => history.push('/Login')}
+            style={styles.twinbot2}>
+            <Text style={{ fontSize: 18 }}>Iniciar Sesion</Text>
+          </TouchableOpacity>
+        </View>
       </View>
-      <View>
+
+      <View style={styles.title}>
+        <Text style={{ fontSize: 36 }}>Iniciar Seccion</Text>
+      </View>
+
+      <View style={styles.formcontainer}>
+        <View>
+          <Text style={{ fontSize: 18 }}>Nombre de usuario</Text>
+          <View style={styles.junto}>
+            <Icon name="person-outline" style={styles.icon} />
+            <TextInput style={styles.input} placeholder="Nombre de usuario" />
+          </View>
+        </View>
+        <View>
+          <Text style={{ fontSize: 18 }}>Contraseña</Text>
+          <View style={styles.junto}>
+            <Icon name="lock-closed-outline" style={styles.icon} />
+            <TextInput style={styles.input} placeholder="Nombre de usuario" />
+          </View>
+        </View>
         <TouchableOpacity
-          onPress={() => history.push('/Login')}
-          style={styles.twinbot2}>
-          <Text style={{ fontSize: 18 }}>Iniciar Sesion</Text>
+          onPress={() => alert('A logrado Logearte')}
+          style={styles.regbot}>
+          <Text style={{ fontSize: 18 }}>Log in</Text>
         </TouchableOpacity>
       </View>
     </View>
 
-    <View style={styles.title}>
-      <Text style={{ fontSize: 36 }}>Iniciar Seccion</Text>
-    </View>
-
-    <View style={styles.formcontainer}>
-      <View>
-        <Text style={{ fontSize: 18 }}>Nombre de usuario</Text>
-        <View style={styles.junto}>
-          <Icon name="person-outline" style={styles.icon} />
-          <TextInput style={styles.input} placeholder="Nombre de usuario" />
-        </View>
-      </View>
-      <View>
-        <Text style={{ fontSize: 18 }}>Contraseña</Text>
-        <View style={styles.junto}>
-          <Icon name="lock-closed-outline" style={styles.icon} />
-          <TextInput style={styles.input} placeholder="Nombre de usuario" />
-        </View>
-      </View>
+    <View style={styles.nav}>
       <TouchableOpacity
-        onPress={() => alert('A logrado Logearte')}
-        style={styles.regbot}>
-        <Text style={{ fontSize: 18 }}>Log in</Text>
+        onPress={() => history.push('/Search')}
+        style={styles.navItem}>
+        <Text style={styles.butsize}>Search</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => history.push('/Home')}
+        style={styles.navItem}>
+        <Text style={styles.butsize}>Home</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => history.push('/Sigup')}
+        style={styles.navItem}>
+        <Text style={styles.butsize}>Sigup</Text>
       </TouchableOpacity>
     </View>
   </View>
@@ -63,7 +83,7 @@ export default ({ history }) => (
 const styles = StyleSheet.create({
   container: {
     //backgroundColor: '#999',
-    padding: 2,
+    padding: 0,
   },
 
   supbottom: {
@@ -72,7 +92,8 @@ const styles = StyleSheet.create({
     padding: 2,
     flexDirection: 'row',
     justifyContent: 'space-around',
-    position: 'relative', top: -10,
+    position: 'relative',
+    top: -10,
   },
   twinbot2: {
     padding: 2,
@@ -134,15 +155,36 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 10,
     borderColor: '#FC4C00',
-    position: 'relative', top: 85,
+    position: 'relative',
+    top: 85,
   },
   junto: {
     paddingTop: 13,
     flexDirection: 'row',
   },
   icon: {
-    paddingTop:2,
+    paddingTop: 2,
     fontSize: 23,
     color: '#FC4C00',
   },
+
+  //barra principal FC4C00
+  nav: {
+    justifyContent: 'space-around',
+    flexDirection: 'row',
+    backgroundColor: '#FC4C00',
+    position: 'relative',
+    top: 227,
+    height: 45,
+    width: '100%',
+    alignItems: 'center',
+  },
+  navItem: {
+    alignItems: 'center',
+    //flex:1,
+  },
+  butsize: {
+    fontSize: 20,
+  },
 });
+
