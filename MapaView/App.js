@@ -20,6 +20,7 @@ import { creatnavigationDraw } from '@react-navigation/drawer';
 
 import Home from './Pantalla/Home';
 import Search from './Pantalla/Search';
+import Sigup from './Pantalla/Sigup';
 import Login from './Pantalla/Login';
 
 //<Text style={styles.butsize}>Search</Text>
@@ -34,35 +35,21 @@ function App() {
           <Link to="/Home" underlayColor="#292929" style={styles.navItem}>
             <Text style={styles.butsize}>Home</Text>
           </Link>
-          <Link to="/Login" underlayColor="#f0f4f7" style={styles.navItem}>
-            <Text style={styles.butsize}>Login</Text>
+          <Link to="/Sigup" underlayColor="#f0f4f7" style={styles.navItem}>
+            <Text style={styles.butsize}>Sigup</Text>
           </Link>
         </View>
 
         <Switch>
-          <Route exact path="/Home" component={Home} />
+          <Route exact path="/" component={Home} />
           <Route exact path="/Search" component={Search} />
-          <Route exact path="/" component={Login} />
+          <Route exact path="/Sigup" component={Sigup} />
+          <Route exact path="/Login" component={Login} />
         </Switch>
       </View>
     </NativeRouter>
   );
 }
-
-// export default class App extends React.Component {
-//   render() {
-//     return (
-//       <NativeRouter>
-//         <View style={styles.container}>
-//           <Switch>
-//             <Route exact path="/" component={Home} />
-//             <Route exact path="/Search" component={Search} />
-//           </Switch>
-//         </View>
-//       </NativeRouter>
-//     );
-//   }
-// }
 
 const styles = StyleSheet.create({
   container: {
