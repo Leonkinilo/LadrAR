@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     position:'absolute', top: -45,
   },
   map: {
-    width: 326,
-    height: 540,
+    width: 393,
+    height: 613,
   },
 });
