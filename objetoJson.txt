@@ -1,11 +1,11 @@
   {
    "nombre" : "",
-   "ubicacion" : "",
    "latitud": 762134578145,
    "longitud": 873693,
    "descripcion" : "",
    "contacto" : "",
-   "tipo" : ""
+   "tipo" : "",
+   "creador" : ""
    }
 
    .env : MONGODB_URI=mongodb+srv://ladrar:Password1@ladrar.phvn7.mongodb.net/test?retryWrites=true&w=majority

@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "expo-constants": "~11.0.1",
+    "react-native-map": "^0.0.1",
+    "react-navigation": "*",
+    "react-native-maps": "0.28.0",
+    "react-native-paper": "3.6.0",
+    "react-router-native": "*",
+    "react-native-screens": "~3.4.0",
+    "react-native-ionicons": "*",
+    "react-navigation-stack": "*",
+    "@react-navigation/stack": "*",
+    "react-native-navigation": "*",
+    "react-native-reanimated": "~2.2.0",
+    "react-navigation-drawer": "*",
+    "@react-navigation/drawer": "*",
+    "@react-navigation/native": "6.0.0",
+    "react-native-vector-icons": "8.1.0",
+    "react-native-gesture-handler": "~1.10.2",
+    "react-native-safe-area-context": "3.2.0",
+    "react-native-vector-icons/Ionicons": "*",
+    "@react-native-community/masked-view": "0.1.10",
+    "react-native-vector-icons/FontAwesome": "*"
+  }
+}
