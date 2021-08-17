@@ -20,7 +20,7 @@ import { creatnavigationDraw } from '@react-navigation/drawer';
 
 import Home from './Pantalla/Home';
 import Search from './Pantalla/Search';
-import Sigup from './Pantalla/Sigup';
+import Signup from './Pantalla/Signup';
 import Login from './Pantalla/Login';
 import Homepage from './Homepage';
 
@@ -36,14 +36,14 @@ function App() {
           <Link to="/Home" underlayColor="#292929" style={styles.navItem}>
             <Text style={styles.butsize}>Home</Text>
           </Link>
-          <Link to="/Sigup" underlayColor="#f0f4f7" style={styles.navItem}>
-            <Text style={styles.butsize}>Sigup</Text>
+          <Link to="/Signup" underlayColor="#f0f4f7" style={styles.navItem}>
+            <Text style={styles.butsize}>Sign up</Text>
           </Link>
         </View>
         <Switch>
           <Route exact path="/Home" component={Home} />
           <Route exact path="/Search" component={Search} />
-          <Route exact path="/Sigup" component={Sigup} />
+          <Route exact path="/Signup" component={Signup} />
           <Route exact path="/Login" component={Login} />
           <Route exact path="/Homepage" component={Homepage} />
         </Switch>
