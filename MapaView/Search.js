@@ -9,6 +9,7 @@ import {
   TouchableOpacity,
   TextInput,
 } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 export default ({ history }) => (
   <View style={styles.container}>
@@ -37,17 +38,17 @@ export default ({ history }) => (
       <TouchableOpacity
         onPress={() => history.push('/Search')}
         style={styles.navItem}>
-        <Text style={styles.butsize}>Search</Text>
+        <Icon name="menu" style={styles.iconBar} />
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => history.push('/Home')}
         style={styles.navItem}>
-        <Text style={styles.butsize}>Home</Text>
+        <Icon name="location-outline" style={styles.iconBar} />
       </TouchableOpacity>
       <TouchableOpacity
-        onPress={() => history.push('/Sigup')}
+        onPress={() => history.push('/Signup')}
         style={styles.navItem}>
-        <Text style={styles.butsize}>Sigup</Text>
+        <Icon name="person-outline" style={styles.iconBar} />
       </TouchableOpacity>
     </View>
   </View>
@@ -81,7 +82,7 @@ const styles = StyleSheet.create({
   nav: {
     justifyContent: 'space-around',
     flexDirection: 'row',
-    backgroundColor: '#FC4C00',
+    backgroundColor: '#FFFF',
     position: 'relative',
     top: 18,
     height: 45,
@@ -94,5 +95,9 @@ const styles = StyleSheet.create({
   },
   butsize: {
     fontSize: 20,
+  },
+    iconBar:{
+    fontSize:30,
+    color: "#FC4C00",
   },
 });
