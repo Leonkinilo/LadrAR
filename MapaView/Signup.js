@@ -19,7 +19,7 @@ export default ({ history, navigation }) => (
       <View style={styles.supbottom}>
         <View>
           <TouchableOpacity
-            onPress={() => history.push('/Sigup')}
+            onPress={() => history.push('/Signup')}
             style={styles.twinbot1}>
             <Text style={{ fontSize: 18 }}>Registrarse</Text>
           </TouchableOpacity>
@@ -34,7 +34,7 @@ export default ({ history, navigation }) => (
       </View>
 
       <View style={styles.title}>
-        <Text style={{ fontSize: 36 }}>Resgistrate</Text>
+        <Text style={{ fontSize: 36 }}>Registrate</Text>
       </View>
 
       <View style={styles.formcontainer}>
@@ -56,7 +56,11 @@ export default ({ history, navigation }) => (
           <Text style={{ fontSize: 18 }}>Contraseña</Text>
           <View style={styles.junto}>
             <Icon name="lock-closed-outline" style={styles.icon} />
-            <TextInput style={styles.input} placeholder="Nombre de usuario" />
+            <TextInput
+              style={styles.input}
+              placeholder="Nombre de usuario"
+              secureTextEntry={true}
+            />
           </View>
         </View>
         <TouchableOpacity
@@ -71,17 +75,17 @@ export default ({ history, navigation }) => (
       <TouchableOpacity
         onPress={() => history.push('/Search')}
         style={styles.navItem}>
-        <Text style={styles.butsize}>Search</Text>
+        <Icon name="menu" style={styles.iconBar} />
       </TouchableOpacity>
       <TouchableOpacity
         onPress={() => history.push('/Home')}
         style={styles.navItem}>
-        <Text style={styles.butsize}>Home</Text>
+        <Icon name="location-outline" style={styles.iconBar} />
       </TouchableOpacity>
       <TouchableOpacity
-        onPress={() => history.push('/Sigup')}
+        onPress={() => history.push('/Signup')}
         style={styles.navItem}>
-        <Text style={styles.butsize}>Sigup</Text>
+        <Icon name="person-outline" style={styles.iconBar} />
       </TouchableOpacity>
     </View>
   </View>
@@ -177,7 +181,7 @@ const styles = StyleSheet.create({
   nav: {
     justifyContent: 'space-around',
     flexDirection: 'row',
-    backgroundColor: '#FC4C00',
+    backgroundColor: '#FFFF',
     position: 'relative',
     top: 142,
     height: 45,
@@ -190,5 +194,9 @@ const styles = StyleSheet.create({
   },
   butsize: {
     fontSize: 20,
+  },
+  iconBar: {
+    fontSize: 30,
+    color: '#FC4C00',
   },
 });
