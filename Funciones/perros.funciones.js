@@ -1,4 +1,4 @@
-const ubicaciones = [];
+const perros = [];
 
 const Models = require('../modelos/puntosdeinteres.modelos');
 
@@ -48,4 +48,4 @@ perros.Borrar = async (req, res) => {
     res.send('objeto borrado MAMASA');
 }
 
-module.exports = ubicaciones;
+module.exports = perros;

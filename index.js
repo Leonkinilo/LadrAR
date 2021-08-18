@@ -17,7 +17,7 @@ app.use(express.json());
 // global variables
 
 // routes
-app.use('/home', require ('./routes/ubicaciones.rutas'));
+app.use('/home', require ('./routes/perros.rutas'));
 app.get('/', (req, res) =>{
     res.redirect('/home');
 });
