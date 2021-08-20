@@ -8,43 +8,47 @@ import {
   Alert,
   Image,
   TouchableOpacity,
+  Animated,
 } from 'react-native';
 import { NativeRouter, Route, Link, Switch } from 'react-router-native';
 import { Navegation } from 'react-native-navigation';
 import { creatnavigationStack } from '@react-navigation/stack';
 import { creatnavigationDraw } from '@react-navigation/drawer';
+import { LinearGradient } from "expo-linear-gradient";
+import axios from "axios";
 
 // import Constants from 'expo-constants';
 // import { Card } from 'react-native-paper';
 // import AssetExample from './components/AssetExample';
 
-import Home from './Pantalla/Home';
-import Search from './Pantalla/Search';
-import Signup from './Pantalla/Signup';
-import Login from './Pantalla/Login';
+import Home from './Pantalla/home';
+import Search from './Pantalla/search';
+import Signup from './Pantalla/signup';
+import Login from './Pantalla/login';
 import Homepage from './Homepage';
 
-//<Text style={styles.butsize}>Search</Text>
+const AnimatedLinearGradient = Animated.createAnimatedComponent(LinearGradient);
+
 function App() {
   return (
     <NativeRouter>
       <View style={styles.container}>
         <View style={styles.nav}>
-          <Link to="/Search" underlayColor="#f0f4f7" style={styles.navItem}>
+          <Link to="/search" underlayColor="#f0f4f7" style={styles.navItem}>
             <Text style={styles.butsize}>Search</Text>
           </Link>
-          <Link to="/Home" underlayColor="#292929" style={styles.navItem}>
+          <Link to="/home" underlayColor="#292929" style={styles.navItem}>
             <Text style={styles.butsize}>Home</Text>
           </Link>
-          <Link to="/Signup" underlayColor="#f0f4f7" style={styles.navItem}>
+          <Link to="/signup" underlayColor="#f0f4f7" style={styles.navItem}>
             <Text style={styles.butsize}>Sign up</Text>
           </Link>
         </View>
         <Switch>
-          <Route exact path="/Home" component={Home} />
-          <Route exact path="/Search" component={Search} />
-          <Route exact path="/Signup" component={Signup} />
-          <Route exact path="/Login" component={Login} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/search" component={Search} />
+          <Route exact path="/signup" component={Signup} />
+          <Route exact path="/login" component={Login} />
           <Route exact path="/Homepage" component={Homepage} />
         </Switch>
       </View>
@@ -73,7 +77,7 @@ const styles = StyleSheet.create({
   nav: {
     justifyContent: 'space-around',
     flexDirection: 'row',
-    backgroundColor: '#FC4C00',
+    backgroundColor: 'transparent',
     position: 'relative',
     top: 613,
     height: 45,
