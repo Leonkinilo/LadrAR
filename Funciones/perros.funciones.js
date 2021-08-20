@@ -24,7 +24,7 @@ perros.BuscarTodas = async (req, res) => {
     
 }
 perros.Buscar = async (req, res) => {
-    const ubicacion = await Models.find({"nombre": req.params.id});
+    const ubicacion = await Models.find({"descripcion": req.params.id});
     res.json(ubicacion);
 }
 
