@@ -17,17 +17,17 @@ export default ({ history }) => (
     </View>
     <View style={styles.nav}>
       <TouchableOpacity
-        onPress={() => history.push('/Search')}
+        onPress={() => history.push('/search')}
         style={styles.navItem}>
         <Icon name="menu" style={styles.iconBar} />
       </TouchableOpacity>
       <TouchableOpacity
-        onPress={() => history.push('/Home')}
+        onPress={() => history.push('/home')}
         style={styles.navItem}>
         <Icon name="location-outline" style={styles.iconBar} />
       </TouchableOpacity>
       <TouchableOpacity
-        onPress={() => history.push('/Signup')}
+        onPress={() => history.push('/signup')}
         style={styles.navItem}>
         <Icon name="person-outline" style={styles.iconBar} />
       </TouchableOpacity>
@@ -63,11 +63,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     //flex:1,
   },
-  butsize: {
-    fontSize: 20,
-  },
+  // butsize: {
+  //   fontSize: 20,
+  // },
   iconBar: {
     fontSize: 30,
     color: '#FC4C00',
   },
 });
+
