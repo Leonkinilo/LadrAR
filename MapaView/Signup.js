@@ -19,14 +19,14 @@ export default ({ history, navigation }) => (
       <View style={styles.supbottom}>
         <View>
           <TouchableOpacity
-            onPress={() => history.push('/Signup')}
+            onPress={() => history.push('/signup')}
             style={styles.twinbot1}>
             <Text style={{ fontSize: 18 }}>Registrarse</Text>
           </TouchableOpacity>
         </View>
         <View>
           <TouchableOpacity
-            onPress={() => history.push('/Login')}
+            onPress={() => history.push('/login')}
             style={styles.twinbot2}>
             <Text style={{ fontSize: 18 }}>Iniciar Sesion</Text>
           </TouchableOpacity>
@@ -73,17 +73,17 @@ export default ({ history, navigation }) => (
 
     <View style={styles.nav}>
       <TouchableOpacity
-        onPress={() => history.push('/Search')}
+        onPress={() => history.push('/search')}
         style={styles.navItem}>
         <Icon name="menu" style={styles.iconBar} />
       </TouchableOpacity>
       <TouchableOpacity
-        onPress={() => history.push('/Home')}
+        onPress={() => history.push('/home')}
         style={styles.navItem}>
         <Icon name="location-outline" style={styles.iconBar} />
       </TouchableOpacity>
       <TouchableOpacity
-        onPress={() => history.push('/Signup')}
+        onPress={() => history.push('/signup')}
         style={styles.navItem}>
         <Icon name="person-outline" style={styles.iconBar} />
       </TouchableOpacity>
@@ -192,9 +192,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     //flex:1,
   },
-  butsize: {
-    fontSize: 20,
-  },
+  // butsize: {
+  //   fontSize: 20,
+  // },
   iconBar: {
     fontSize: 30,
     color: '#FC4C00',

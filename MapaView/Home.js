@@ -71,4 +71,3 @@ const styles = StyleSheet.create({
     color: '#FC4C00',
   },
 });
-
