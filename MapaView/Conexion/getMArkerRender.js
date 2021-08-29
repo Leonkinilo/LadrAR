@@ -31,7 +31,7 @@ componentWillUpdate
     const datos = await axios.get("http://ladr-ar.herokuapp.com/home", {
       id, nombre, latitud, longitud, descripcion, contacto, tipo, creador
     }
-    );
+    )};
     <Text>{datos}</Text>
 
     return(
