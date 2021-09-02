@@ -7,7 +7,7 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.8"
+    "nodemon": "^2.0.12"
   },
   "name": "LadrAR-main",
   "description": "Una aplicacion la cual facilita el encuentro y la busqueda de perro perdidos, ademas de facilitar el acceso a vetrinarias, refugios y puntos de venta de productos para mascotas",
