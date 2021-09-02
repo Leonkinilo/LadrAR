@@ -17,21 +17,38 @@ export default ({ history }) => (
     </View>
     <View style={styles.nav}>
       <TouchableOpacity
-        onPress={() => history.push('/search')}
+        onPress={() => history.push('/searchScreen')}
         style={styles.navItem}>
         <Icon name="menu" style={styles.iconBar} />
       </TouchableOpacity>
       <TouchableOpacity
-        onPress={() => history.push('/home')}
+        onPress={() => history.push('/homeScreen')}
         style={styles.navItem}>
         <Icon name="location-outline" style={styles.iconBar} />
       </TouchableOpacity>
       <TouchableOpacity
-        onPress={() => history.push('/signup')}
+        onPress={() => history.push('/signupScreen')}
         style={styles.navItem}>
         <Icon name="person-outline" style={styles.iconBar} />
       </TouchableOpacity>
     </View>
+
+    <TouchableOpacity
+        onPress={() => history.push('/searchScreen')}
+        style={styles.navItem1}>
+        <Icon name="menu" style={styles.iconBar} />
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => history.push('/homeScreen')}
+        style={styles.navItem}>
+        <Icon name="location-outline" style={styles.iconBar} />
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => history.push('/signupScreen')}
+        style={styles.navItem}>
+        <Icon name="person-outline" style={styles.iconBar} />
+      </TouchableOpacity>
+      
   </View>
 );
 
@@ -59,8 +76,10 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
   },
-  navItem: {
+  navItem1: {
     alignItems: 'center',
+    backgroundColor: '#999',
+    position: 'relative', top: 0,
     //flex:1,
   },
   // butsize: {
