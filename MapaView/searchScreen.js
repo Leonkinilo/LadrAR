@@ -34,23 +34,22 @@ export default ({ history }) => (
         <TextInput style={styles.tama} />
       </View>
     </View>
-    <View style={styles.nav}>
-      <TouchableOpacity
-        onPress={() => history.push('/search')}
-        style={styles.navItem}>
-        <Icon name="menu" style={styles.iconBar} />
-      </TouchableOpacity>
-      <TouchableOpacity
-        onPress={() => history.push('/home')}
-        style={styles.navItem}>
-        <Icon name="location-outline" style={styles.iconBar} />
-      </TouchableOpacity>
-      <TouchableOpacity
-        onPress={() => history.push('/signup')}
-        style={styles.navItem}>
-        <Icon name="person-outline" style={styles.iconBar} />
-      </TouchableOpacity>
-    </View>
+
+    <TouchableOpacity
+      onPress={() => history.push('/searchScreen')}
+      style={styles.navItem1}>
+      <Icon name="menu" style={styles.iconBar} />
+    </TouchableOpacity>
+    <TouchableOpacity
+      onPress={() => history.push('/homeScreen')}
+      style={styles.navItem2}>
+      <Icon name="location-outline" style={styles.iconBar} />
+    </TouchableOpacity>
+    <TouchableOpacity
+      onPress={() => history.push('/signupScreen')}
+      style={styles.navItem3}>
+      <Icon name="person-outline" style={styles.iconBar} />
+    </TouchableOpacity>
   </View>
 );
 
@@ -58,7 +57,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#fff',
     padding: 0,
-    flexDirection: 'colum',
+    flexDirection: 'column',
   },
   blancocontainer: {
     position: 'relative',
@@ -72,32 +71,36 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   tama: {
+    padding: 4,
     borderWidth: 2,
     borderRadius: 0,
     borderColor: '#CCC',
     height: '100%',
     width: '99%',
   },
-
-  nav: {
-    justifyContent: 'space-around',
-    flexDirection: 'row',
-    backgroundColor: '#FFFF',
-    position: 'relative',
-    top: 18,
-    height: 45,
-    width:'100%',
+  navItem1: {
     alignItems: 'center',
+    position: 'absolute',
+    top: 574,
+    left: 39,
   },
-  navItem: {
+  navItem2: {
     alignItems: 'center',
-    //flex:1,
+    position: 'absolute',
+    top: 574,
+    right: 149,
+  },
+  navItem3: {
+    alignItems: 'center',
+    position: 'absolute',
+    top: 574,
+    left: 258,
   },
   // butsize: {
   //   fontSize: 20,
   // },
-    iconBar:{
-    fontSize:30,
-    color: "#FC4C00",
+  iconBar: {
+    fontSize: 30,
+    color: '#FC4C00',
   },
 });

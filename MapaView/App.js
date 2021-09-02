@@ -21,10 +21,10 @@ import axios from "axios";
 // import { Card } from 'react-native-paper';
 // import AssetExample from './components/AssetExample';
 
-import Home from './Pantalla/home';
-import Search from './Pantalla/search';
-import Signup from './Pantalla/signup';
-import Login from './Pantalla/login';
+import Home from './Pantalla/homeScreen';
+import Search from './Pantalla/searchScreen';
+import Signup from './Pantalla/signupScreen';
+import Login from './Pantalla/loginScreen';
 import Homepage from './Homepage';
 
 const AnimatedLinearGradient = Animated.createAnimatedComponent(LinearGradient);
@@ -33,22 +33,15 @@ function App() {
   return (
     <NativeRouter>
       <View style={styles.container}>
+
         <View style={styles.nav}>
-          <Link to="/search" underlayColor="#f0f4f7" style={styles.navItem}>
-            <Text style={styles.butsize}>Search</Text>
-          </Link>
-          <Link to="/home" underlayColor="#292929" style={styles.navItem}>
-            <Text style={styles.butsize}>Home</Text>
-          </Link>
-          <Link to="/signup" underlayColor="#f0f4f7" style={styles.navItem}>
-            <Text style={styles.butsize}>Sign up</Text>
-          </Link>
         </View>
+
         <Switch>
-          <Route exact path="/home" component={Home} />
-          <Route exact path="/search" component={Search} />
-          <Route exact path="/signup" component={Signup} />
-          <Route exact path="/login" component={Login} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/searchScreen" component={Search} />
+          <Route exact path="/signupScreen" component={Signup} />
+          <Route exact path="/loginScreen" component={Login} />
           <Route exact path="/Homepage" component={Homepage} />
         </Switch>
       </View>
@@ -83,13 +76,13 @@ const styles = StyleSheet.create({
     height: 45,
     alignItems: 'center',
   },
-  navItem: {
-    alignItems: 'center',
-    //flex:1,
-  },
-  butsize: {
-    fontSize: 20,
-  },
+  // navItem: {
+  //   alignItems: 'center',
+  //   //flex:1,
+  // },
+  // butsize: {
+  //   fontSize: 20,
+  // },
 });
 
 export default App;

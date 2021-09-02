@@ -13,20 +13,20 @@ import {
 import Icon from 'react-native-vector-icons/Ionicons';
 //import Icon from 'react-native-vector-icons/FontAwesome';
 
-export default ({ history }) => (
+export default ({ history, navigation }) => (
   <View style={styles.container}>
     <View style={{ padding: 2 }}>
       <View style={styles.supbottom}>
         <View>
           <TouchableOpacity
-            onPress={() => history.push('/signup')}
+            onPress={() => history.push('/signupScreen')}
             style={styles.twinbot1}>
             <Text style={{ fontSize: 18 }}>Registrarse</Text>
           </TouchableOpacity>
         </View>
         <View>
           <TouchableOpacity
-            onPress={() => history.push('/login')}
+            onPress={() => history.push('/loginScreen')}
             style={styles.twinbot2}>
             <Text style={{ fontSize: 18 }}>Iniciar Sesion</Text>
           </TouchableOpacity>
@@ -34,7 +34,7 @@ export default ({ history }) => (
       </View>
 
       <View style={styles.title}>
-        <Text style={{ fontSize: 36 }}>Iniciar Seccion</Text>
+        <Text style={{ fontSize: 36 }}>Registrate</Text>
       </View>
 
       <View style={styles.formcontainer}>
@@ -42,6 +42,13 @@ export default ({ history }) => (
           <Text style={{ fontSize: 18 }}>Nombre de usuario</Text>
           <View style={styles.junto}>
             <Icon name="person-outline" style={styles.icon} />
+            <TextInput style={styles.input} placeholder="Nombre de usuario" />
+          </View>
+        </View>
+        <View>
+          <Text style={{ fontSize: 18 }}>Correo electronico</Text>
+          <View style={styles.junto}>
+            <Icon name="mail-outline" style={styles.icon} />
             <TextInput style={styles.input} placeholder="Nombre de usuario" />
           </View>
         </View>
@@ -57,26 +64,26 @@ export default ({ history }) => (
           </View>
         </View>
         <TouchableOpacity
-          onPress={() => alert('A logrado Logearte')}
+          onPress={() => alert('A logrado registrarse')}
           style={styles.regbot}>
-          <Text style={{ fontSize: 18 }}>Log in</Text>
+          <Text style={{ fontSize: 18 }}>Registrarse</Text>
         </TouchableOpacity>
       </View>
     </View>
 
     <View style={styles.nav}>
       <TouchableOpacity
-        onPress={() => history.push('/search')}
+        onPress={() => history.push('/searchScreen')}
         style={styles.navItem}>
         <Icon name="menu" style={styles.iconBar} />
       </TouchableOpacity>
       <TouchableOpacity
-        onPress={() => history.push('/home')}
+        onPress={() => history.push('/homeScreen')}
         style={styles.navItem}>
         <Icon name="location-outline" style={styles.iconBar} />
       </TouchableOpacity>
       <TouchableOpacity
-        onPress={() => history.push('/signup')}
+        onPress={() => history.push('/signupScreen')}
         style={styles.navItem}>
         <Icon name="person-outline" style={styles.iconBar} />
       </TouchableOpacity>
@@ -159,8 +166,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 10,
     borderColor: '#FC4C00',
-    position: 'relative',
-    top: 85,
   },
   junto: {
     paddingTop: 13,
@@ -172,13 +177,13 @@ const styles = StyleSheet.create({
     color: '#FC4C00',
   },
 
-  //barra principal FC4C00
+  //barra principal
   nav: {
     justifyContent: 'space-around',
     flexDirection: 'row',
     backgroundColor: '#FFFF',
     position: 'relative',
-    top: 227,
+    top: 142,
     height: 45,
     width: '100%',
     alignItems: 'center',
