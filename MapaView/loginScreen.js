@@ -19,14 +19,14 @@ export default ({ history }) => (
       <View style={styles.supbottom}>
         <View>
           <TouchableOpacity
-            onPress={() => history.push('/signup')}
+            onPress={() => history.push('/signupScreen')}
             style={styles.twinbot1}>
             <Text style={{ fontSize: 18 }}>Registrarse</Text>
           </TouchableOpacity>
         </View>
         <View>
           <TouchableOpacity
-            onPress={() => history.push('/login')}
+            onPress={() => history.push('/loginScreen')}
             style={styles.twinbot2}>
             <Text style={{ fontSize: 18 }}>Iniciar Sesion</Text>
           </TouchableOpacity>
@@ -66,17 +66,17 @@ export default ({ history }) => (
 
     <View style={styles.nav}>
       <TouchableOpacity
-        onPress={() => history.push('/search')}
+        onPress={() => history.push('/searchScreen')}
         style={styles.navItem}>
         <Icon name="menu" style={styles.iconBar} />
       </TouchableOpacity>
       <TouchableOpacity
-        onPress={() => history.push('/home')}
+        onPress={() => history.push('/homeScreen')}
         style={styles.navItem}>
         <Icon name="location-outline" style={styles.iconBar} />
       </TouchableOpacity>
       <TouchableOpacity
-        onPress={() => history.push('/signup')}
+        onPress={() => history.push('/signupScreen')}
         style={styles.navItem}>
         <Icon name="person-outline" style={styles.iconBar} />
       </TouchableOpacity>
