@@ -61,7 +61,7 @@ export const app = async ({
             latitudeDelta: 0.015,
             longitudeDelta: 0.0121,
           }}>
-          this.state.datos.map(nombres => (
+          {/* {this.state.datos.map(nombres => ( */}
           <Marker
             coordinate={{
               latitude: parseFloat(datos.latitud),
