@@ -1,11 +1,14 @@
 {
   "dependencies": {
+    "axios": "*",
+    "expo-location": "~12.1.2",
     "expo-constants": "~11.0.1",
     "react-native-map": "^0.0.1",
     "react-navigation": "*",
     "react-native-maps": "0.28.0",
     "react-native-paper": "3.6.0",
     "react-router-native": "*",
+    "expo-linear-gradient": "~9.2.0",
     "react-native-screens": "~3.4.0",
     "react-native-ionicons": "*",
     "react-navigation-stack": "*",
