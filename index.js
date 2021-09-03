@@ -18,6 +18,7 @@ app.use(express.json());
 
 // routes
 app.use('/home', require ('./routes/perros.rutas'));
+app.use('/usuario', require('./routes/usuarios.rutas'))
 app.get('/', (req, res) =>{
     res.redirect('/home');
 });
