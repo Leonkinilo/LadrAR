@@ -7,7 +7,8 @@ const usuarios = require ('../Funciones/usuarios.funciones');
 //rutas.get('/', perros.Metodoget);
 //rutas.delete('/', perros.borrar);
 rutas.route('/')
-    .get(usuarios.Crear)
+    .post(usuarios.Crear)
+    .delete(usuarios.Borrar)
 
 
 rutas.route('/:id')
