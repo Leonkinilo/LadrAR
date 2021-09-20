@@ -10,6 +10,7 @@ import {
   TouchableOpacity,
   TouchableHighlight,
 } from 'react-native';
+import RNPickerSelect from 'react-native-picker-select';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { Field, Form, Formik, FormikProps } from 'formik';
 
@@ -17,10 +18,19 @@ export default ({ history }) => (
   <View style={styles.container}>
     <View style={styles.border}>
       <View style={styles.div1}>
-        <TextInput style={styles.textin} />
-        <Button></Button>
+        <RNPickerSelect
+          style={styles.picker}
+          Title="Elegir categoria"
+          //placeholder=""
+          onValueChange={(value) => console.log(value)}
+          items={[
+            { label: 'Perro', value: 'perro' },
+            { label: 'Hogar de transito', value: 'hogar de transito' },
+          ]}
+        />
+        <Button title="" />
       </View>
-      
+
       <View style={styles.div}>
         <Text>Direccion:</Text>
         <TextInput style={styles.textin} />
@@ -30,42 +40,51 @@ export default ({ history }) => (
         <TextInput style={styles.textin} />
       </View>
 
-      <Button></Button>
+      <Button
+        title="Guardar"
+        onPress={() => Alert.alert('Simple Button pressed')}
+      />
+
+      <TouchableOpacity
+        onPress={() => alert('A logrado Logearte')}
+        style={styles.but}>
+        <Text style={{ fontSize: 22 }}>Guardar</Text>
+      </TouchableOpacity>
+      
     </View>
   </View>
 );
 
-
-      //  <Form>
-      //      <Field type="email" name="email" placeholder="Email" />
-      //      <Field as="select" name="color">
-      //        <option value="red">Red</option>
-      //        <option value="green">Green</option>
-      //        <option value="blue">Blue</option>
-      //   </Field>
-
 const styles = StyleSheet.create({
-  container:{
+  container: {
     padding: 2,
     margin: 1,
+    marginTop: '25%',
     backgroundColor: 'black',
   },
-  border:{
+  border: {
     padding: 10,
     backgroundColor: 'pink',
+    borderRadius: 25,
   },
-  div1:{
+  div1: {
     marginBottom: 10,
     flexDirection: 'row',
   },
-  div:{
+  div: {
     marginBottom: 10,
   },
-  textin:{
+  textin: {
     borderWidth: 1,
-    borderRadius: 10,
+    borderRadius: 15,
     borderColor: '#FC4C00',
     marginTop: 10,
     padding: 5,
+  },
+  picker: {},
+  but: {
+    alignItems: "center",
+    width: "50%",
+    backgroundColor: "#ffff",
   },
 });
