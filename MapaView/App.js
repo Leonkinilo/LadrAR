@@ -25,6 +25,7 @@ import Home from './Pantalla/homeScreen';
 import Search from './Pantalla/searchScreen';
 import Signup from './Pantalla/signupScreen';
 import Login from './Pantalla/loginScreen';
+import Plus from './Pantalla/plusScreen';
 import Homepage from './Homepage';
 
 const AnimatedLinearGradient = Animated.createAnimatedComponent(LinearGradient);
@@ -38,10 +39,11 @@ function App() {
         </View>
 
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/homeScreen" component={Home} />
           <Route exact path="/searchScreen" component={Search} />
           <Route exact path="/signupScreen" component={Signup} />
           <Route exact path="/loginScreen" component={Login} />
+          <Route exact path="/" component={Plus} />
           <Route exact path="/Homepage" component={Homepage} />
         </Switch>
       </View>
