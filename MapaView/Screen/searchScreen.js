@@ -35,21 +35,23 @@ export default ({ history }) => (
       </View>
     </View>
 
-    <TouchableOpacity
-      onPress={() => history.push('/searchScreen')}
-      style={styles.navItem1}>
-      <Icon name="menu" style={styles.iconBar} />
-    </TouchableOpacity>
-    <TouchableOpacity
-      onPress={() => history.push('/homeScreen')}
-      style={styles.navItem2}>
-      <Icon name="location-outline" style={styles.iconBar} />
-    </TouchableOpacity>
-    <TouchableOpacity
-      onPress={() => history.push('/signupScreen')}
-      style={styles.navItem3}>
-      <Icon name="person-outline" style={styles.iconBar} />
-    </TouchableOpacity>
+    <View style={styles.nav}>
+      <TouchableOpacity
+        onPress={() => history.push('/searchScreen')}
+        style={styles.navItem}>
+        <Icon name="menu" style={styles.iconBar} />
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => history.push('/homeScreen')}
+        style={styles.navItem}>
+        <Icon name="location-outline" style={styles.iconBar} />
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => history.push('/signupScreen')}
+        style={styles.navItem}>
+        <Icon name="person-outline" style={styles.iconBar} />
+      </TouchableOpacity>
+    </View>
   </View>
 );
 
@@ -78,27 +80,21 @@ const styles = StyleSheet.create({
     height: '100%',
     width: '99%',
   },
-  navItem1: {
-    alignItems: 'center',
-    position: 'absolute',
-    top: 574,
-    left: 39,
-  },
-  navItem2: {
-    alignItems: 'center',
-    position: 'absolute',
-    top: 574,
-    right: 149,
-  },
-  navItem3: {
-    alignItems: 'center',
-    position: 'absolute',
-    top: 574,
-    left: 258,
-  },
+
   // butsize: {
   //   fontSize: 20,
   // },
+  //barra
+  nav: {
+    padding: 2,
+    justifyContent: 'space-around',
+    flexDirection: 'row',
+    backgroundColor: '#FFFF',
+    height: 50,
+    width: '100%',
+    alignItems: 'center',
+    marginTop: 28,
+  },
   iconBar: {
     fontSize: 30,
     color: '#FC4C00',

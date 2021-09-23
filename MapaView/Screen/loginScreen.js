@@ -34,7 +34,7 @@ export default ({ history }) => (
       </View>
 
       <View style={styles.title}>
-        <Text style={{ fontSize: 36 }}>Iniciar Seccion</Text>
+        <Text style={{ fontSize: 36, textAlign: "center",}}>Iniciar Seccion</Text>
       </View>
 
       <View style={styles.formcontainer}>
@@ -174,18 +174,18 @@ const styles = StyleSheet.create({
 
   //barra principal FC4C00
   nav: {
+    padding: 2,
     justifyContent: 'space-around',
     flexDirection: 'row',
     backgroundColor: '#FFFF',
-    position: 'relative',
-    top: 227,
-    height: 45,
+    height: 50,
     width: '100%',
     alignItems: 'center',
+    marginTop: 240,
   },
-  navItem: {
-    alignItems: 'center',
-    //flex:1,
+  iconBar: {
+    fontSize: 30,
+    color: '#FC4C00',
   },
   // butsize: {
   //   fontSize: 20,

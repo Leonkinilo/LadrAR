@@ -21,7 +21,7 @@ export default ({ history, navigation }) => (
           <TouchableOpacity
             onPress={() => history.push('/signupScreen')}
             style={styles.twinbot1}>
-            <Text style={{ fontSize: 18 }}>Registrarse</Text>
+            <Text style={{ fontSize: 18,}}>Registrarse</Text>
           </TouchableOpacity>
         </View>
         <View>
@@ -34,7 +34,7 @@ export default ({ history, navigation }) => (
       </View>
 
       <View style={styles.title}>
-        <Text style={{ fontSize: 36 }}>Registrate</Text>
+        <Text style={{ fontSize: 36, textAlign: "center", }}>Registrate</Text>
       </View>
 
       <View style={styles.formcontainer}>
@@ -179,18 +179,18 @@ const styles = StyleSheet.create({
 
   //barra principal
   nav: {
+    padding: 2,
     justifyContent: 'space-around',
     flexDirection: 'row',
     backgroundColor: '#FFFF',
-    position: 'relative',
-    top: 142,
-    height: 45,
+    height: 50,
     width: '100%',
     alignItems: 'center',
+    marginTop: 150,
   },
-  navItem: {
-    alignItems: 'center',
-    //flex:1,
+  iconBar: {
+    fontSize: 30,
+    color: '#FC4C00',
   },
   // butsize: {
   //   fontSize: 20,

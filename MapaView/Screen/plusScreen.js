@@ -46,7 +46,7 @@ export default ({ history }) => (
         <Text>Direccion:</Text>
         <TextInput style={styles.textin} />
         <Text>Contacto:</Text>
-        <TextInput style={styles.textin} />
+        <TextInput keyboardType="numeric" style={styles.textin} />
         <Text>Descripcion:</Text>
         <TextInput style={styles.textin} />
       </View>
@@ -57,6 +57,26 @@ export default ({ history }) => (
         <Text style={{ fontSize: 22 }}>Guardar</Text>
       </TouchableOpacity>
     </View>
+
+    <View style={styles.nav}>
+      <TouchableOpacity
+        onPress={() => history.push('/searchScreen')}
+        style={styles.navItem1}>
+        <Icon name="menu" style={styles.iconBar} />
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        onPress={() => history.push('/homeScreen')}
+        style={styles.navItem}>
+        <Icon name="location-outline" style={styles.iconBar} />
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        onPress={() => history.push('/signupScreen')}
+        style={styles.navItem}>
+        <Icon name="person-outline" style={styles.iconBar} />
+      </TouchableOpacity>
+    </View>
   </View>
 );
 
@@ -65,13 +85,15 @@ const styles = StyleSheet.create({
     padding: 2,
     margin: 1,
     marginTop: '25%',
-    backgroundColor: 'black',
+    //backgroundColor: 'black',
     //lineHeight: 20,
   },
   border: {
     padding: 10,
-    backgroundColor: 'pink',
+    //backgroundColor: 'pink',
     borderRadius: 25,
+    borderWidth: 1,
+    borderColor: '#B2B2B2',
   },
   div1: {
     marginBottom: 10,
@@ -91,9 +113,8 @@ const styles = StyleSheet.create({
   },
   picker: {},
   but1: {
-    alingSelf: 'center',
     alignItems: 'center',
-    justifyContent: '',
+    justifyContent: 'center',
     width: '50%',
     backgroundColor: '#ffff',
     marginLeft: '25%',
@@ -111,5 +132,20 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: '#FC4C00',
   },
-});
 
+  //barra
+    nav: {
+    padding: 2,
+    justifyContent: 'space-around',
+    flexDirection: 'row',
+    backgroundColor: '#FFFF',
+    height: 50,
+    width: '100%',
+    alignItems: 'center',
+    marginTop: 80,
+  },
+  iconBar: {
+    fontSize: 30,
+    color: '#FC4C00',
+  },
+});

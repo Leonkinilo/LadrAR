@@ -1,5 +1,4 @@
-import * as React from 'react';
-import react from 'react';
+import React from 'react';
 import {
   StyleSheet,
   Text,
@@ -13,22 +12,7 @@ import {
 import Icon from 'react-native-vector-icons/Ionicons';
 import MapView from 'react-native-maps';
 import { Marker, Polyline, Polygon } from 'react-native-maps';
-//import { GoogleMap, Marker } from "react-google-maps"
-
-// {MARKERS.map((marker) => (
-//   <Marker
-//     //key={marker.id}
-//     coordinate={{
-//       // latitude: marker.latitude,
-//       // longitude: marker.longitude,
-//       latitude: -34.54977,
-//       longitude: -58.453956,
-//     }}
-//     title="El Estarbocks"
-//     description="Esto es el Estarbocks"
-//   />
-// ))}
-
+//<Image style={styles.map} source={require('../assets/Imagenmapa.jpg')} />
 export default ({ history }) => (
   <View style={styles.container}>
     <View style={styles.mapcontainer}>
@@ -82,17 +66,22 @@ export default ({ history }) => (
         />
       </MapView>
     </View>
+
     <View style={styles.nav}>
-      <TouchableOpacity onPress={() => alert('Search')} style={styles.navItem}>
+      <TouchableOpacity
+        onPress={() => history.push('/searchScreen')}
+        style={styles.navItem1}>
         <Icon name="menu" style={styles.iconBar} />
       </TouchableOpacity>
+
       <TouchableOpacity
-        onPress={() => history.push('/Home')}
+        onPress={() => history.push('/homeScreen')}
         style={styles.navItem}>
         <Icon name="location-outline" style={styles.iconBar} />
       </TouchableOpacity>
+
       <TouchableOpacity
-        onPress={() => history.push('/Signup')}
+        onPress={() => history.push('/signupScreen')}
         style={styles.navItem}>
         <Icon name="person-outline" style={styles.iconBar} />
       </TouchableOpacity>
@@ -102,7 +91,13 @@ export default ({ history }) => (
 
 const styles = StyleSheet.create({
   container: {
+    padding: 10,
     alignItems: 'center',
+    justifyContent: 'space-between',
+    flex: 1,
+    flexDirection: 'column',
+    backgroundColor: 'black',
+    height: '94%',
   },
   mapcontainer: {
     position: 'absolute',
@@ -110,23 +105,30 @@ const styles = StyleSheet.create({
   },
   map: {
     width: Dimensions.get('window').width,
-    height: Dimensions.get('window').height,
+    height: Dimensions.get('screen').height,
   },
-
+  navItem1: {
+    backgroundColor: 'yellow',
+    flex: 0,
+  },
+  navItem2: {
+    backgroundColor: 'skyblue',
+    flex: 0,
+  },
+  navItem3: {
+    backgroundColor: 'red',
+    flex: 1,
+  },
   //barra principal
   nav: {
+    padding: 2,
     justifyContent: 'space-around',
     flexDirection: 'row',
     backgroundColor: '#FFFF',
-    position: 'relative',
-    top: 667,
-    height: 45,
+    height: 50,
     width: '100%',
     alignItems: 'center',
-  },
-  navItem: {
-    alignItems: 'center',
-    //flex:1,
+    marginTop: 80,
   },
   iconBar: {
     fontSize: 30,
