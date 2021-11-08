@@ -1,7 +1,13 @@
 import React, { Component } from 'react'
-import { InputGroup, FormControl, Form, Button} from "react-bootstrap"
+import { InputGroup, FormControl, Button} from "react-bootstrap"
+import axios from 'axios'
+
 
 export class subir extends Component {
+  
+    data =  axios.post("http://ladr-ar.herokuapp.com/home");
+
+   
     render() {
         return (
             <>
@@ -68,7 +74,7 @@ export class subir extends Component {
                     />
                 </InputGroup>
 
-                <Button variant="dark">GUARDAR</Button>
+                <Button variant="dark" align="self-center" onClick> GUARDAR </Button>
             </>
         )
     }
