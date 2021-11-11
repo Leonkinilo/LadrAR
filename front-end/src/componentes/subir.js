@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
-import { InputGroup, FormControl, Button} from "react-bootstrap"
-import axios from 'axios'
+import { InputGroup, FormControl, Button } from "react-bootstrap"
+
+
+
 
 
 export class subir extends Component {
-  
-    data =  axios.post("http://ladr-ar.herokuapp.com/home");
 
-   
+    // data =  axios.post("http://ladr-ar.herokuapp.com/home");
+
+
+
     render() {
         return (
             <>
