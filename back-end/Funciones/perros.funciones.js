@@ -21,7 +21,7 @@ perros.Crear = async (req, res) => {
 perros.BuscarTodas = async (req, res) => {
     const Ubicaciones = await Perros.find();
     res.json(Ubicaciones);
-    
+    return Ubicaciones;
 }
 perros.Buscar = async (req, res) => {
     const ubicacion = await Perros.find({"tipo": req.params.id});
