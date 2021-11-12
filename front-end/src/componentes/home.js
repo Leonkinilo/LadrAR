@@ -9,8 +9,6 @@ async function getdatos(){
   const response = await axios.get("http://ladr-ar.herokuapp.com/home", {
   });
   return response;
-
-
 }
 
 export default function home() {

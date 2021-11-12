@@ -1,11 +1,11 @@
 const perros = [];
 
-const Models = require('../modelos/puntosdeinteres.modelos');
+import Perros from '../modelos/puntosdeinteres.modelos';
 
 perros.Crear = async (req, res) => {
     const { nombre, latitud, longitud, descripcion, contacto, tipo, creador } = req.body;
     if (!latitud || !longitud || !tipo) return res.status(400).json({message: "Faltan 1 o mas parametros requeridos!"});
-    const nuevaubicacion = new Models ({
+    const nuevaubicacion = new Perros ({
         nombre,
         latitud, 
         longitud,
@@ -19,18 +19,18 @@ perros.Crear = async (req, res) => {
 }
 
 perros.BuscarTodas = async (req, res) => {
-    const Ubicaciones = await Models.find();
+    const Ubicaciones = await Perros.find();
     res.json(Ubicaciones);
     
 }
 perros.Buscar = async (req, res) => {
-    const ubicacion = await Models.find({"tipo": req.params.id});
+    const ubicacion = await Perros.find({"tipo": req.params.id});
     res.json(ubicacion);
 }
 
 perros.Actualizar = async (req, res) => {
     const { nombre, latitud, longitud, descripcion, contacto, tipo, creador } = req.body;
-    const puntodeinteres = await Models.findOneAndUpdate({_id: req.params.id}, {
+    const puntodeinteres = await Perros.findOneAndUpdate({_id: req.params.id}, {
         nombre,
         latitud,
         longitud,
@@ -43,7 +43,7 @@ perros.Actualizar = async (req, res) => {
 }
 
 perros.Borrar = async (req, res) => {
-    await Models.findByIdAndDelete(req.params.id);
+    await Perros.findByIdAndDelete(req.params.id);
     res.send('objeto borrado MAMASA');
 }
 
