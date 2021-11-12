@@ -30,4 +30,4 @@ const PuntoDeInteresSchema = new Schema({
     timestamps: true
 });
 
-module.exports = model('Perros', PuntoDeInteresSchema);
+module.exports = model('perros', PuntoDeInteresSchema);
