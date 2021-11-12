@@ -10,6 +10,7 @@ async function getdatos(){
   });
   return response;
 }
+const data = getdatos();
 
 export default function home() {
 
@@ -25,7 +26,7 @@ export default function home() {
 
     <div>
       <Button onClick={()=>
-      console.log(getdatos([{}]))
+      console.log(getdatos({data}))
       }></Button>
      
       <h1>tu re vieja</h1>
