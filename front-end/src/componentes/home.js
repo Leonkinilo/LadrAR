@@ -25,7 +25,7 @@ export default function home() {
 
     <div>
       <Button onClick={()=>
-      console.log(getdatos({}))
+      console.log(getdatos([{}]))
       }></Button>
      
       <h1>tu re vieja</h1>
