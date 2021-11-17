@@ -6,7 +6,7 @@ import axios from "axios";
 export default function Subir() {
 
     const [newPost, setNewPost] = React.useState({
-        "nombre" : "Juancho",
+        "nombre" : "Pedro",
         "latitud": 762134578145,
         "longitud": 873693,
         "descripcion" : "grande y rubio",
@@ -19,7 +19,8 @@ export default function Subir() {
         try {
             const resp = await axios.post('https://ladr-ar.herokuapp.com/home', newPost);
             console.log(resp.newPost);
-        } catch (err) {
+        } 
+        catch (err) {
             // Handle Error Here
             console.error(err);
         }
