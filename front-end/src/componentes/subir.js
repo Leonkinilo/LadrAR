@@ -4,26 +4,46 @@ import axios from "axios";
 
 
 export default function Subir() {
-    const newPost = {
-    Nombre: 'Fred',
-    Tipo: 'Flintstone',
-    Descrpcion: 'tu madre',
-    Latitud: 7624367,
-    Longitud: 478365,
-    Creador: 'yo',
-    Contacto: 'grita soy puto',
-    };
+
+    const [newPost, setNewPost] = React.useState({
+        "nombre" : "Marquitos",
+        "latitud": 762134578145,
+        "longitud": 873693,
+        "descripcion" : "grande y rubio",
+        "contacto" : "85654432",
+        "tipo" : "perrera",
+        "creador" : "Don Juan"
+    });
     
     const sendPostRequest = async () => {
         try {
             const resp = await axios.post('https://ladr-ar.herokuapp.com/home', newPost);
-            console.log(resp.data);
+            console.log(resp.newPost);
         } catch (err) {
             // Handle Error Here
             console.error(err);
         }
     };
-    sendPostRequest();
+    
+    React.useEffect(() => {
+        sendPostRequest();
+    }, []);
+    
+    // const [data,setData] = useState([])
+    // async function postDatos(){
+    //     axios.post('https://ladr-ar.herokuapp.com/home', newPerro);
+    //     setData(postDatos)
+    //     console.log(newPerro);
+    // }
+    // const newPerro = {
+    //     nombre: 'Fred',
+    //     Tipo: 'Flintstone',
+    //     Descrpcion: 'tu madre',
+    //     Latitud: 7624367,
+    //     Longitud: 478365,
+    //     Creador: 'yo',
+    //     Contacto: 'grita soy puto',
+    //     };
     return (
         <>
             <InputGroup className="mb-3">
@@ -89,7 +109,7 @@ export default function Subir() {
                 />
             </InputGroup>
 
-            <Button variant="dark" align="self-center"> GUARDAR </Button>
+            <Button variant="dark" align="self-center" onClick={() => sendPostRequest()}> GUARDAR </Button>
         </>
     )
 }
